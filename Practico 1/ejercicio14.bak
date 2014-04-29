@@ -1,0 +1,21 @@
+program ejercicio14;
+uses Estructu;
+var
+	modelo, dada, dada2, basura: pila;
+begin
+	Inicpila (modelo, '5');
+	Readpila (dada);
+	Inicpila (dada2);
+	Inicpila (basura);
+	while not pilavacia (dada) do
+	begin
+		if tope (dada) = tope (modelo) then
+			apilar(basura, desapilar (dada))
+		else
+			apilar (dada2, desapilar (dada));
+	while not pilavacia (dada2) do
+		apilar (dada, desapilar (dada2));
+	end;
+	Writepila (dada);
+	Readln ();
+end.
