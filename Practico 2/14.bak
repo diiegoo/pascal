@@ -1,0 +1,31 @@
+program ejercicio14;
+uses Estructu;
+var grande, parte, aux, aux2: pila;
+begin
+	write ('ingrese datos grande');
+	readpila (grande);
+	write ('ingrese datos parte');
+	readpila (parte);
+	inicpila (aux, ' ');
+	inicpila (aux2, ' ');
+	while not pilavacia (grande) do
+	begin
+		apilar (aux, desapilar (grande));
+		while not pilavacia (parte) do
+		begin
+			if (tope (aux)) = (tope (parte)) then
+				apilar (aux2, desapilar (parte));
+		end;
+	end;
+	while not pilavacia (aux) do
+	begin
+		apilar (grande, desapilar (aux));
+	end;
+	write ('grande');
+	write (' ');
+	writepila (grande);
+	write ('parte');
+	write (' ');
+	writepila (parte);
+	readln ();
+end.

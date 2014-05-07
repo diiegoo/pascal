@@ -1,0 +1,25 @@
+program ejercicio15;
+uses Estructu;
+var
+	dada, elemento, aux: pila;
+begin
+	readpila (dada);
+	readpila (elemento);
+	inicpila (aux);
+	while not pilavacia (dada) do
+	begin
+		if not pilavacia (elemento) and 
+			(tope (elemento)) = (tope (dada)) then
+			apilar (dada, desapilar (elemento))
+		else
+			apilar (aux, desapilar (dada));
+	end;
+	while not pilavacia (aux) do
+	begin
+		apilar (dada, desapilar (aux));
+	end;
+	write ('dada');
+	write (' ');
+	writepila (dada);
+	readln ();
+end.
