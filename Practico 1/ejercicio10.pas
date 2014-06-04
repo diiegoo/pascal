@@ -18,4 +18,5 @@ begin
 	apilar (DADA, desapilar (AUX2));
 	Writepila (DADA);
 	Readln ();
+	dnasjqwjbidaswq
 end.
